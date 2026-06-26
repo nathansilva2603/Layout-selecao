@@ -1,177 +1,209 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+```css
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#333;
 }
 
-/* CABEÇALHO */
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: linear-gradient(90deg, #0057ff, #00c853);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+/* =========================
+   CABEÇALHO
+========================= */
+.cabecalho{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:linear-gradient(90deg,#009c3b,#ffdf00,#002776);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-.cabecalho-alura {
-    height: 60px;
+.cabecalho-logos{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.cabecalho-lista {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+.cabecalho-alura{
+    width:70px;
+    height:auto;
 }
 
-.cabecalho-lista li {
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: .3s;
+.cabecalho-copa{
+    width:70px;
+    height:auto;
 }
 
-.cabecalho-lista li:hover {
-    color: #ffe600;
+.cabecalho-lista{
+    list-style:none;
+    display:flex;
 }
 
-/* INTRODUÇÃO */
-.escola {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+.cabecalho-lista-item{
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.3s;
 }
 
-.escola-div-conteudo {
-    text-align: center;
+.cabecalho-lista-item:hover{
+    color:#ffe600;
 }
 
-.escola-titulo {
-    font-size: 38px;
-    color: #0057ff;
-    margin-bottom: 20px;
+/* =========================
+   APRESENTAÇÃO
+========================= */
+.escola{
+    max-width:1200px;
+    margin:40px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.escola-div-conteudo{
+    text-align:center;
+}
+
+.escola-titulo{
+    font-size:40px;
+    color:#009c3b;
+    margin-bottom:20px;
 }
 
 .escola-texto-um,
-.escola-texto-dois {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 15px auto;
+.escola-texto-dois{
+    max-width:850px;
+    margin:15px auto;
+    font-size:18px;
+    line-height:1.8;
 }
 
-/* JOGADORES */
-.estudante {
-    padding: 50px 30px;
+/* =========================
+   JOGADORES
+========================= */
+.estudante{
+    padding:50px 30px;
 }
 
-.estudante-titulo {
-    text-align: center;
-    font-size: 36px;
-    color: #0057ff;
-    margin-bottom: 40px;
+.estudante-titulo{
+    text-align:center;
+    font-size:38px;
+    color:#002776;
+    margin-bottom:40px;
 }
 
-.estudante-todos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1300px;
-    margin: auto;
+.estudante-todos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    max-width:1400px;
+    margin:auto;
 }
 
-/* CARD */
-.estudante-div {
-    text-decoration: none;
-    color: #333;
-    background: white;
-    border-radius: 18px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: .3s;
+.estudante-div{
+    text-decoration:none;
+    color:#333;
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.estudante-div:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+.estudante-div:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 
-/* FOTO */
-.estudante-imagem {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
+.estudante-imagem{
+    width:210px;
+    height:210px;
+    object-fit:cover;
+    border-radius:15px;
 }
 
-/* NOME */
-.estudante-nome {
-    font-size: 22px;
-    font-weight: 600;
-    color: #222;
+.estudante-nome{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:600;
 }
 
-/* FOOTER */
-footer {
-    margin-top: 50px;
-    padding: 25px;
-    text-align: center;
-    background: linear-gradient(90deg, #0057ff, #00c853);
-    color: white;
-    font-size: 18px;
+/* =========================
+   RODAPÉ
+========================= */
+footer{
+    margin-top:50px;
+    background:linear-gradient(90deg,#009c3b,#ffdf00,#002776);
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    font-size:18px;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width:768px){
 
-    .cabecalho {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    .cabecalho{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
     }
 
-    .cabecalho-lista {
-        flex-direction: column;
-        gap: 10px;
+    .cabecalho-logos{
+        gap:15px;
     }
 
-    .escola {
-        margin: 20px;
-        padding: 25px;
+    .cabecalho-alura,
+    .cabecalho-copa{
+        width:55px;
     }
 
-    .escola-titulo {
-        font-size: 30px;
+    .cabecalho-lista-item{
+        font-size:20px;
+    }
+
+    .escola{
+        margin:20px;
+        padding:25px;
+    }
+
+    .escola-titulo{
+        font-size:30px;
     }
 
     .escola-texto-um,
-    .escola-texto-dois {
-        font-size: 16px;
+    .escola-texto-dois{
+        font-size:16px;
     }
 
-    .estudante-titulo {
-        font-size: 30px;
+    .estudante-titulo{
+        font-size:30px;
     }
 
-    .estudante-imagem {
-        width: 180px;
-        height: 180px;
+    .estudante-todos{
+        grid-template-columns:1fr;
     }
 
-    .estudante-nome {
-        font-size: 18px;
+    .estudante-imagem{
+        width:180px;
+        height:180px;
+    }
+
+    .estudante-nome{
+        font-size:20px;
     }
 }
