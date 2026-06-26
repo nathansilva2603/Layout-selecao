@@ -1,8 +1,14 @@
-body {
-    font-family: 'Poppins', sans-serif;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f7fa;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
 /* CABEÇALHO */
@@ -10,119 +16,162 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-
-    background: linear-gradient(90deg, #1a5cff, #00c853);
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #0057ff, #00c853);
     color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .cabecalho-alura {
-    height: 50px;
+    height: 60px;
 }
 
 .cabecalho-lista {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    gap: 30px;
 }
 
-/* INTRO */
+.cabecalho-lista li {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cabecalho-lista li:hover {
+    color: #ffe600;
+}
+
+/* INTRODUÇÃO */
 .escola {
-    padding: 25px 15px;
-    text-align: center;
-    background-color: #ffffff;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .escola-div-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 .escola-titulo {
-    font-size: 28px;
-    color: #1a1a1a;
-    margin-bottom: 10px;
+    font-size: 38px;
+    color: #0057ff;
+    margin-bottom: 20px;
 }
 
 .escola-texto-um,
 .escola-texto-dois {
-    max-width: 650px;
-    margin: 8px auto;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #444;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 15px auto;
 }
 
 /* JOGADORES */
 .estudante {
-    padding: 30px 15px;
-    text-align: center;
+    padding: 50px 30px;
 }
 
 .estudante-titulo {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #1a1a1a;
+    text-align: center;
+    font-size: 36px;
+    color: #0057ff;
+    margin-bottom: 40px;
 }
 
 .estudante-todos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
 }
 
-/* CARD DO JOGADOR (LINK) */
+/* CARD */
 .estudante-div {
-    width: 150px;
     text-decoration: none;
-    color: inherit;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 12px;
-    border-radius: 14px;
-
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-    transition: 0.3s ease;
+    color: #333;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: .3s;
 }
 
-/* hover */
 .estudante-div:hover {
-    transform: translateY(-5px) scale(1.03);
-    background-color: #f0f7ff;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
-/* IMAGEM */
+/* FOTO */
 .estudante-imagem {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 /* NOME */
 .estudante-nome {
-    margin-top: 10px;
-    font-size: 14px;
+    font-size: 22px;
+    font-weight: 600;
     color: #222;
 }
 
 /* FOOTER */
 footer {
+    margin-top: 50px;
+    padding: 25px;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-
-    background: linear-gradient(90deg, #1a5cff, #00c853);
+    background: linear-gradient(90deg, #0057ff, #00c853);
     color: white;
+    font-size: 18px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cabecalho-lista {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .escola {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .escola-titulo {
+        font-size: 30px;
+    }
+
+    .escola-texto-um,
+    .escola-texto-dois {
+        font-size: 16px;
+    }
+
+    .estudante-titulo {
+        font-size: 30px;
+    }
+
+    .estudante-imagem {
+        width: 180px;
+        height: 180px;
+    }
+
+    .estudante-nome {
+        font-size: 18px;
+    }
 }
