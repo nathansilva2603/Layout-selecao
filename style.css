@@ -1,182 +1,93 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    font-family:'Poppins', sans-serif;
-    background: linear-gradient(180deg, #f5f5f5, #e9eef7);
-    color:#111;
+/* CABEÇALHO */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0066ff;
+    color: white;
 }
 
-/* ===== HEADER ===== */
-.cabecalho{
-    background: linear-gradient(90deg, #009c3b, #012169);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 60px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+.cabecalho-lista {
+    list-style: none;
 }
 
-.cabecalho-alura{
-    width:75px;
-    transition: .3s;
+/* SEÇÃO INTRO */
+.escola {
+    padding: 40px;
+    text-align: center;
 }
 
-.cabecalho-alura:hover{
-    transform: scale(1.05);
-}
-
-.cabecalho-lista{
-    list-style:none;
-}
-
-.cabecalho-lista-item{
-    font-size:22px;
-    font-weight:700;
-    letter-spacing:1px;
-}
-
-/* ===== HERO ===== */
-.escola{
-    background: linear-gradient(135deg, #009c3b, #012169);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-}
-
-.escola-titulo{
-    font-size:44px;
-    margin-bottom:20px;
-    font-weight:800;
+.escola-titulo {
+    font-size: 32px;
 }
 
 .escola-texto-um,
-.escola-texto-dois{
-    max-width:900px;
-    margin:15px auto;
-    font-size:18px;
-    line-height:1.7;
-    opacity:0.95;
+.escola-texto-dois {
+    max-width: 700px;
+    margin: 10px auto;
 }
 
-/* ===== JOGADORES ===== */
-.estudante{
-    padding:70px 30px;
-    text-align:center;
+/* JOGADORES */
+.estudante {
+    padding: 40px;
+    text-align: center;
 }
 
-.estudante-titulo{
-    font-size:38px;
-    color:#012169;
-    margin-bottom:50px;
-    font-weight:800;
+.estudante-todos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.estudante-todos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-    gap:28px;
-    max-width:1200px;
-    margin:0 auto;
+/* 🔥 IMPORTANTE: agora é link (<a>) */
+.estudante-div {
+    width: 150px;
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    transition: 0.3s;
 }
 
-/* CARD */
-.estudante-div{
-    background:white;
-    border-radius:18px;
-    padding:22px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
-    transition: all 0.3s ease;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    cursor:pointer;
-
-    position:relative;
-    overflow:hidden;
-    z-index:1;
-}
-
-/* efeito brilho */
-.estudante-div::before{
-    content:"";
-    position:absolute;
-    top:-50%;
-    left:-50%;
-    width:200%;
-    height:200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
-    transform: rotate(25deg);
-    opacity:0;
-    transition:0.4s;
-    z-index:0;
-}
-
-.estudante-div:hover::before{
-    opacity:1;
-}
-
-.estudante-div:hover{
-    transform: translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* garante conteúdo acima do efeito */
-.estudante-div > *{
-    position:relative;
-    z-index:2;
-}
-
-/* IMAGEM */
-.estudante-imagem{
-    width:160px;
-    height:160px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #ffdf00;
-    transition:0.3s;
-}
-
-.estudante-div:hover .estudante-imagem{
+/* efeito hover clicável */
+.estudante-div:hover {
     transform: scale(1.05);
+    background-color: #f0f0f0;
 }
 
-/* NOME */
-.estudante-nome{
-    margin-top:15px;
-    color:#012169;
-    font-size:20px;
-    font-weight:600;
+/* imagem do jogador */
+.estudante-imagem {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* INSTAGRAM */
-.estudante-insta{
-    margin-top:8px;
-    display:inline-block;
-    font-size:14px;
-    color:#e1306c;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
+/* nome */
+.estudante-nome {
+    margin-top: 10px;
+    font-size: 14px;
 }
 
-.estudante-insta:hover{
-    color:#012169;
-    transform:scale(1.05);
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background: linear-gradient(90deg, #012169, #009c3b);
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
-    font-weight:500;
-    letter-spacing:1px;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0066ff;
+    color: white;
+    margin-top: 40px;
 }
