@@ -91,15 +91,18 @@ body{
     padding:22px;
     box-shadow:0 8px 20px rgba(0,0,0,0.12);
     transition: all 0.3s ease;
+
     display:flex;
     flex-direction:column;
     align-items:center;
     cursor:pointer;
+
     position:relative;
     overflow:hidden;
+    z-index:1;
 }
 
-/* efeito leve de brilho */
+/* efeito brilho */
 .estudante-div::before{
     content:"";
     position:absolute;
@@ -111,6 +114,7 @@ body{
     transform: rotate(25deg);
     opacity:0;
     transition:0.4s;
+    z-index:0;
 }
 
 .estudante-div:hover::before{
@@ -120,6 +124,12 @@ body{
 .estudante-div:hover{
     transform: translateY(-10px);
     box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* garante conteúdo acima do efeito */
+.estudante-div > *{
+    position:relative;
+    z-index:2;
 }
 
 /* IMAGEM */
@@ -144,16 +154,7 @@ body{
     font-weight:600;
 }
 
-/* ===== FOOTER ===== */
-footer{
-    background: linear-gradient(90deg, #012169, #009c3b);
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:60px;
-    font-weight:500;
-    letter-spacing:1px;
-}
+/* INSTAGRAM */
 .estudante-insta{
     margin-top:8px;
     display:inline-block;
@@ -167,4 +168,15 @@ footer{
 .estudante-insta:hover{
     color:#012169;
     transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background: linear-gradient(90deg, #012169, #009c3b);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-weight:500;
+    letter-spacing:1px;
 }
