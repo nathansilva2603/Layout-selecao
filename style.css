@@ -2,6 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 /* CABEÇALHO */
@@ -9,35 +10,54 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     background-color: #0066ff;
     color: white;
 }
 
-.cabecalho-lista {
-    list-style: none;
+.cabecalho-alura {
+    height: 50px;
 }
 
-/* SEÇÃO INTRO */
+.cabecalho-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* CARD INTRO (BRASIL) */
 .escola {
-    padding: 40px;
+    padding: 20px 15px;
     text-align: center;
 }
 
+.escola-div-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .escola-titulo {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .escola-texto-um,
 .escola-texto-dois {
-    max-width: 700px;
-    margin: 10px auto;
+    max-width: 650px;
+    margin: 8px auto;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 /* JOGADORES */
 .estudante {
-    padding: 40px;
+    padding: 30px 15px;
     text-align: center;
+}
+
+.estudante-titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .estudante-todos {
@@ -47,7 +67,7 @@ body {
     gap: 20px;
 }
 
-/* 🔥 IMPORTANTE: agora é link (<a>) */
+/* CARD DO JOGADOR (AGORA É <a>) */
 .estudante-div {
     width: 150px;
     text-decoration: none;
@@ -57,27 +77,28 @@ body {
     flex-direction: column;
     align-items: center;
 
-    border-radius: 10px;
     padding: 10px;
+    border-radius: 12px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-/* efeito hover clicável */
+/* hover bonito */
 .estudante-div:hover {
     transform: scale(1.05);
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
 
-/* imagem do jogador */
+/* IMAGEM */
 .estudante-imagem {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-/* nome */
+/* NOME */
 .estudante-nome {
     margin-top: 10px;
     font-size: 14px;
